@@ -8,6 +8,7 @@ import { projectsData } from "@/data/projects";
 
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
+import { ProjectData } from "@/data/projects";
 
 const Projects = () => {
     const [filter, setFilter] = useState("all");
@@ -57,7 +58,7 @@ const Projects = () => {
 };
 
 // Extracted Component for better interaction handling (Hover, Mouse tracking)
-const ProjectItem = ({ project, index }: { project: any, index: number }) => {
+const ProjectItem = ({ project, index }: { project: ProjectData, index: number }) => {
     const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 });
     const [isHovered, setIsHovered] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);
@@ -101,6 +102,7 @@ const ProjectItem = ({ project, index }: { project: any, index: number }) => {
             {/* CARD CONTAINER - Liquid Glass Border */}
             <Link
                 to={`/projets/${project.id}`}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 ref={cardRef as any}
                 className="group relative w-full rounded-[40px] border border-white/10 bg-white/[0.02] backdrop-blur-sm overflow-hidden block"
                 onMouseMove={handleMouseMove}
@@ -175,7 +177,7 @@ const ProjectItem = ({ project, index }: { project: any, index: number }) => {
 
             {/* Tech Stack Pills (Below Card) */}
             <div className="flex flex-wrap gap-2 px-2">
-                {project.tech.map((tech: any, i: number) => (
+                {project.tech.map((tech, i) => (
                     <div key={i} className="px-5 py-2.5 rounded-full border border-white/10 bg-white/5 flex items-center gap-2.5 hover:bg-white/10 transition-colors">
                         <tech.icon size={18} className="text-white/60" />
                         <span className="text-sm font-medium tracking-wide text-white/90 uppercase font-outfit">{tech.name}</span>

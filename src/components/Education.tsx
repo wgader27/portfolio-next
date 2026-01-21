@@ -85,7 +85,7 @@ const Education = () => {
   );
 };
 
-const TimelineItem = ({ item, index }: { item: any, index: number }) => {
+const TimelineItem = ({ item, index }: { item: typeof educationData[0], index: number }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

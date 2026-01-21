@@ -25,6 +25,7 @@ const parseFrontmatter = (fileContent: string) => {
     const frontmatterBlock = match[1];
     const content = fileContent.replace(frontmatterRegex, '').trim();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const metadata: any = {};
     frontmatterBlock.split('\n').forEach(line => {
         const [key, ...valueParts] = line.split(':');

@@ -26,6 +26,7 @@ export interface ProjectData {
     liveLink: string;
     repoLink: string;
     features: string[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     tech: { name: string; icon: any; desc?: string }[];
     challenges: string;
     outcome: string;
