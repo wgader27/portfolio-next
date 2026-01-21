@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nouveau Message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Client-specific styles */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* Reset */
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #050505;
+        }
+
+        /* Fonts */
+        .font-serif {
+            font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif !important;
+        }
+
+        .font-sans {
+            font-family: 'Outfit', Helvetica, Arial, sans-serif !important;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #050505; color: #ffffff;">
+
+    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"
+        style="background-color: #050505; padding: 40px 10px;">
+        <tr>
+            <td align="center">
+                <!-- Glass Container -->
+                <!-- Note: complex CSS box-shadow/backdrop-filter often doesn't work in email. We simulate with borders/images/colors. -->
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"
+                    style="max-width: 600px; background-color: #121212; border: 1px solid #333333; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.8);">
+
+                    <!-- Header Image/Gradient -->
+                    <tr>
+                        <td
+                            style="padding: 0; height: 160px; background: linear-gradient(135deg, #1c1c1c 0%, #0a0a0a 100%); position: relative; text-align: center; vertical-align: middle; border-bottom: 1px solid #2a2a2a;">
+                            <!-- Inner subtle glow effect via border -->
+                            <div
+                                style="display: inline-block; width: 60px; height: 60px; border-radius: 50%; background-color: #1a1a1a; border: 1px solid #333333; line-height: 60px; font-size: 24px; box-shadow: 0 0 15px rgba(255,255,255,0.05);">
+                                📩
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Content Padding -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <!-- Title -->
+                            <h1 class="font-serif"
+                                style="margin: 0 0 30px 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; font-size: 36px; text-align: center; color: #ffffff;">
+                                Nouveau Message
+                            </h1>
+
+                            <p class="font-sans"
+                                style="text-align: center; margin-bottom: 40px; color: #888888; font-size: 16px; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                Vous avez reçu une nouvelle demande de contact via votre portfolio.
+                            </p>
+
+                            <!-- Data Cards (Two Columns for desktop if supported, else stacking) -->
+                            <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"
+                                style="margin-bottom: 24px;">
+                                <tr>
+                                    <!-- Card 1 -->
+                                    <td style="padding-bottom: 16px;">
+                                        <table role="presentation" width="100%" border="0" cellspacing="0"
+                                            cellpadding="0">
+                                            <tr>
+                                                <td
+                                                    style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; border: 1px solid #333333;">
+                                                    <p class="font-sans"
+                                                        style="margin: 0 0 5px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #666666; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                                        De la part de</p>
+                                                    <p class="font-sans"
+                                                        style="margin: 0; font-size: 18px; font-weight: 500; color: #ffffff; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                                        {{name}}</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- Card 2 -->
+                                    <td style="padding-bottom: 16px;">
+                                        <table role="presentation" width="100%" border="0" cellspacing="0"
+                                            cellpadding="0">
+                                            <tr>
+                                                <td
+                                                    style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; border: 1px solid #333333;">
+                                                    <p class="font-sans"
+                                                        style="margin: 0 0 5px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #666666; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                                        Email de contact</p>
+                                                    <p class="font-sans"
+                                                        style="margin: 0; font-size: 18px; font-weight: 500; color: #ffffff; text-decoration: none; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                                        <a href="mailto:{{email}}"
+                                                            style="color: #ffffff; text-decoration: none;">{{email}}</a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Message Bubble -->
+                            <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td
+                                        style="background-color: #0f0f0f; padding: 30px; border-radius: 16px; border: 1px solid #2a2a2a; border-left: 4px solid #ffffff;">
+                                        <p class="font-sans"
+                                            style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #666666; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                            Message</p>
+                                        <p class="font-sans"
+                                            style="margin: 0; font-size: 16px; line-height: 1.6; color: #dddddd; font-style: italic; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                            "{{message}}"
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- CTA Button (Liquid Glass Style) -->
+                            <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"
+                                style="margin-top: 40px;">
+                                <tr>
+                                    <td align="center">
+                                        <!-- 
+                       Glass Button Simulation:
+                       Dark background + Border + Inner Glow (via box-shadow if supported, otherwise border) + Text Glow
+                    -->
+                                        <div><!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="mailto:{{email}}" style="height:50px;v-text-anchor:middle;width:220px;" arcsize="50%" stroke="f" fillcolor="#1a1a1a">
+                        <w:anchorlock/>
+                        <center>
+                      <![endif]-->
+                                            <a href="mailto:{{email}}" style="
+                        background-color: #1a1a1a; 
+                        background-image: linear-gradient(top, #2a2a2a, #1a1a1a);
+                        border: 1px solid rgba(255,255,255,0.2); 
+                        border-radius: 50px; 
+                        color: #ffffff; 
+                        display: inline-block; 
+                        font-family: 'Outfit', Helvetica, Arial, sans-serif;
+                        font-size: 16px; 
+                        font-weight: 600; 
+                        line-height: 50px; 
+                        text-align: center; 
+                        text-decoration: none; 
+                        width: 220px; 
+                        -webkit-text-size-adjust: none;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+                        text-shadow: 0 0 10px rgba(255,255,255,0.3);
+                        ">
+                                                Répondre maintenant &rarr;
+                                            </a>
+                                            <!--[if mso]>
+                        </center>
+                      </v:roundrect>
+                    <![endif]-->
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td
+                            style="padding: 30px; background-color: #0d0d0d; border-top: 1px solid #1f1f1f; text-align: center;">
+                            <p class="font-sans"
+                                style="margin: 0; font-size: 12px; color: #444444; font-family: 'Outfit', Helvetica, Arial, sans-serif;">
+                                Cet e-mail a été envoyé depuis le formulaire de contact de votre Portfolio.<br>
+                                &copy; 2024 Wahel Gader. Tous droits réservés.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
