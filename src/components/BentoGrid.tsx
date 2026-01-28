@@ -94,10 +94,10 @@ const BentoGrid = () => {
           {/* CARD 2: STUDENT PROFILE (Small) */}
           <LiquidCard className="md:col-span-3 lg:col-span-4 flex flex-col justify-center items-center text-center bg-white/" delay={0.2}>
             <div className="w-auto h-auto flex items-center justify-center mb-4">
-              <img src="img_icon.png" className="w-16 h-16 rounded-full object-cover  opacity-80 scale-125 object-top" alt="Student" />
+              <img src="img_wahel.jpg" className="w-16 h-16 rounded-full object-cover  opacity-80 scale-125 object-top" alt="Student" />
             </div>
-            <h4 className="text-xl font-bold text-white mb-1">Bachelor MMI</h4>
-            <p className="text-white/50 text-sm">2ème année • Multimédia & Internet</p>
+            <h4 className="text-xl font-bold text-white mb-1">Wahel GADER</h4>
+            <p className="text-white/50 text-sm">2ème année • BUT MMI</p>
           </LiquidCard>
 
           {/* CARD 3: CV DOWNLOAD (Small) */}
@@ -136,8 +136,8 @@ const BentoGrid = () => {
                 { label: "Angoulême", icon: MapPin, color: "text-blue-400" },
                 { label: "Permis B", icon: CreditCard, color: "text-emerald-400" },
                 { label: "Véhiculé", icon: Car, color: "text-amber-400" },
-                { label: "Curieux", icon: Search, color: "text-violet-400" },
-                { label: "Cinéphile", icon: Film, color: "text-red-400" }
+                { label: "Cinéphile", icon: Film, color: "text-red-400" },
+                { label: "Curieux", icon: Search, color: "text-violet-400" }
               ].map((tag) => (
                 <span
                   key={tag.label}

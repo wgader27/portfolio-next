@@ -10,6 +10,13 @@ import {
     IconBrandThreejs,
     IconBrandAdobePhotoshop,
     IconBrandAdobeIllustrator,
+    IconBrandHtml5,
+    IconBrandJavascript,
+    IconBrandFigma,
+    IconBrandPhp,
+    IconBrandMysql,
+    IconDeviceGamepad,
+    IconCpu,
 } from "@tabler/icons-react";
 
 export interface ProjectData {
@@ -33,7 +40,85 @@ export interface ProjectData {
 }
 
 export const projectsData: ProjectData[] = [
-    // 1. LG Bâtiment
+    // 0. Boutique Click & Collect
+    {
+        id: "boutique-click-collect",
+        date: "2025-12",
+        category: "E-commerce",
+        title: "Boutique Click & Collect",
+        tagline: "E-commerce Click & Collect : Identité Galeries Lafayette",
+        shortDescription: "Site e-commerce complet (Front & API) reprenant l'identité visuelle des Galeries Lafayette.",
+        description: "Ce projet a pour but de créer une boutique Click & Collect en adoptant l'identité visuelle des Galeries Lafayette. J'ai commencé par une analyse approfondie de leur Design System (typographie, boutons,etc...) pour concevoir sur Figma une maquette. Le site est entièrement fonctionnel : développé en HTML, JavaScript et Tailwind pour le front, il interagit avec une API REST complète que j'ai conçue en PHP/MySQL (architecture MVC) pour gérer utilisateurs, catalogue et commandes.",
+        image: "/images/projets/boutique-click-collect-2.png",
+        gallery: [
+            "/images/projets/boutique-click-collect-1.png",
+            "/images/projets/boutique-click-collect-2.png",
+            "/images/projets/boutique-click-collect-3.png",
+            "/images/projets/boutique-click-collect-4.png",
+            "/images/projets/boutique-click-collect-5.png",
+            "/images/projets/boutique-click-collect-6.png",
+            "/images/projets/boutique-click-collect-7.png"
+        ],
+        color: "#3b82f6",
+        liveLink: "https://wgader27.github.io/click-collect-ecom",
+        repoLink: "https://github.com/wgader27/click-collect-ecom",
+        features: [
+            "Analyse Design System (Galeries Lafayette)",
+            "Maquettage UI/UX (Figma)",
+            "API REST Custom (PHP/MySQL)",
+            "Panier & Commandes dynamiques",
+            "Authentification Sécurisée",
+            "Catalogue & Filtres"
+        ],
+        tech: [
+            { name: "HTML5", icon: IconBrandHtml5, desc: "Structure Sémantique" },
+            { name: "Tailwind CSS", icon: IconBrandTailwind, desc: "Styling Rapide" },
+            { name: "JavaScript", icon: IconBrandJavascript, desc: "Logique Client Native" },
+            { name: "PHP", icon: IconBrandPhp, desc: "API REST Backend" },
+            { name: "MySQL", icon: IconBrandMysql, desc: "Base de Données" },
+            { name: "Figma", icon: IconBrandFigma, desc: "Maquettage UI/UX" },
+        ],
+        challenges: "Le principal défi a été de concilier l'intégration stricte d'une charte graphique existante complexe (Galeries Lafayette) avec le développement technique d'une architecture Full Stack robuste (API REST PHP) sans utiliser de frameworks JS facilitant la gestion d'état.",
+        outcome: "Un site e-commerce fonctionnel et esthétique, respectant fidèlement la maquette initiale et rapide à charger."
+    },
+
+    // 1. Panic Burger
+    {
+        id: "panic-burger",
+        date: "2026-01",
+        category: "Jeu & Exergaming",
+        title: "Panic Burger",
+        tagline: "Le jeu qui vous fait transpirer ! (2ème Prix)",
+        shortDescription: "Un jeu d'exergaming interactif codé en p5.js contrôlé via Makey Makey : faites des squats pour cuisiner !",
+        description: "Panic Burger est un projet d'exergaming innovant conçu pour allier sport et jeu vidéo. Le concept est simple mais intense : vous incarnez un chef cuisinier devant préparer des burgers (salade, tomate, viande...) pour des clients capricieux. La particularité ? Votre énergie (barre d'endurance) se recharge uniquement en effectuant des squats réels, détectés grâce à un contrôleur Makey Makey. Si vous n'êtes pas assez rapide, les clients s'impatientent et c'est le Game Over. Ce projet a remporté le 2ème prix de la compétition.",
+        image: "/images/projets/panic-burger.png",
+        gallery: [
+            "/images/projets/panic-burger.png",
+            "/images/projets/panic-burger-2.png",
+            "/images/projets/panic-burger-3.png",
+            "/images/projets/panic-burger-4.png"
+        ],
+        color: "#ef4444",
+        liveLink: "https://wgader.github.io/NUIT-MMI/",
+        repoLink: "https://github.com/wgader27/NUIT-MMI",
+        features: [
+            "Contrôle par le mouvement (Squats)",
+            "Intégration Hardware (Makey Makey)",
+            "P5.js Game Loop",
+            "Design & Son Original",
+            "Gestion de l'énergie & Score"
+        ],
+        tech: [
+            { name: "p5.js", icon: IconBrandJavascript, desc: "Moteur de jeu Créatif" },
+            { name: "Makey Makey", icon: IconCpu, desc: "Contrôleur Hardware" },
+            { name: "Illustrator", icon: IconBrandAdobeIllustrator, desc: "Assets Graphiques" },
+            { name: "Game Design", icon: IconDeviceGamepad, desc: "Mécaniques de Jeu" },
+        ],
+        challenges: "Le défi technique majeur était de calibrer la détection des squats via le Makey Makey pour qu'elle soit réactive sans faux positifs, tout en gérant la boucle de jeu et les animations en p5.js.",
+        outcome: "2ème Prix de la compétition. Un projet ludique qui a prouvé que le code peut sortir de l'écran pour interagir avec le monde physique."
+    },
+
+    // 2. LG Bâtiment
     {
         id: "lg-batiment",
         date: "2025-01",

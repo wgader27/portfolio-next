@@ -1,4 +1,4 @@
-name: CI Checks
+name: Déploiement CI/CD portfolio
 
 on:
   push:
