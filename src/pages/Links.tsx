@@ -121,7 +121,7 @@ const Links = () => {
                                     Discutons
                                 </a>
                                 <a
-                                    href="https://wahel-gader.fr"
+                                    href="https://wahelgader.fr"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
@@ -224,7 +224,7 @@ const Links = () => {
 
                         {/* CTA CARD */}
                         <div className="relative p-8 md:p-12 rounded-[40px] overflow-hidden border border-white/10 mt-8">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20" />
+                            <div className="absolute inset-0 bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all" />
                             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay" />
 
                             <div className="relative z-10 text-center">
