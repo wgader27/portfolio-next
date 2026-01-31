@@ -296,12 +296,10 @@ export const projectsData: ProjectData[] = [
         tagline: "Réseau Social pour développeurs GitHub",
         shortDescription: "Un réseau social type Threads/Twitter lié à GitHub pour les développeurs.",
         description: "Githread est une plateforme sociale inspirée de Threads et Twitter, spécialement conçue pour les développeurs. Les utilisateurs se connectent via leur compte GitHub et peuvent publier des messages, répondre dans les commentaires et gérer leur profil. Une manière de combiner l'univers dev et le microblogging.",
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&q=90",
+        image: "/images/projets/githread.png",
         gallery: [
-            "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&q=90",
-            "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&q=90",
-            "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=1200&q=90",
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=90"
+            "/images/projets/githread.png",
+            "/images/projets/githread-1.png"
         ],
         color: "#1e293b",
         liveLink: "https://wgader27.github.io/githread",
