@@ -19,6 +19,7 @@ import {
     IconCpu,
     IconBrandCSharp,
     IconBrandPython,
+    IconMovie,
 } from "@tabler/icons-react";
 
 export interface ProjectData {
@@ -31,6 +32,7 @@ export interface ProjectData {
     description: string;
     image: string;
     gallery: string[];
+    video?: string; // Optional video field for motion design projects
     color: string;
     liveLink: string;
     repoLink: string;
@@ -129,12 +131,11 @@ export const projectsData: ProjectData[] = [
         tagline: "Plateforme VOD avec Backoffice & Double DA (Canal+)",
         shortDescription: "Un site de streaming complet avec gestion de profils, favoris, backoffice admin et deux versions : DA originale et adaptation Canal+.",
         description: "Ce projet est une plateforme de streaming complète affichant bandes-annonces et informations détaillées sur les films (synopsis, âge, etc.). Les utilisateurs peuvent créer des profils, gérer leurs favoris et rechercher des films. Le backoffice administrateur permet d'ajouter/modifier/supprimer des films, de les mettre en avant, et de gérer les utilisateurs avec des restrictions selon l'âge. J'ai réalisé deux versions du site : une avec une DA originale, et une seconde en analysant et adaptant la charte graphique de **Canal+** (typographie, boutons, couleurs, composants).",
-        image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&q=90",
+        image: "/images/projets/site-streaming.png",
         gallery: [
-            "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&q=90",
-            "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1200&q=90",
-            "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=1200&q=90",
-            "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&q=90"
+            "/images/projets/site-streaming.png",
+            "/images/projets/site-streaming-1.png",
+            "/images/projets/site-streaming-2.png"
         ],
         color: "#10b981",
         liveLink: "https://gader-sae203.mmi-limoges.fr/",
@@ -205,7 +206,7 @@ export const projectsData: ProjectData[] = [
         gallery: [
             "/images/projets/puissance-4.png"
         ],
-        color: "#7c3aed",
+        color: "#c3ed3a",
         liveLink: "",
         repoLink: "https://github.com/wgader27/Puissance4",
         features: [
@@ -290,7 +291,7 @@ export const projectsData: ProjectData[] = [
     // 7. Githread
     {
         id: "githread",
-        date: "2026-01",
+        date: "2024-07",
         category: "Réseau Social",
         title: "Githread",
         tagline: "Réseau Social pour développeurs GitHub",
@@ -301,7 +302,7 @@ export const projectsData: ProjectData[] = [
             "/images/projets/githread.png",
             "/images/projets/githread-1.png"
         ],
-        color: "#1e293b",
+        color: "#ca6e6eff",
         liveLink: "https://wgader27.github.io/githread",
         repoLink: "https://github.com/wgader27/githread",
         features: [
@@ -321,7 +322,37 @@ export const projectsData: ProjectData[] = [
         outcome: "Une plateforme sociale fonctionnelle qui démontre mes compétences en développement Full Stack moderne avec Next.js et Prisma."
     },
 
-    // 8. LG Bâtiment
+    // 8. Lac de Côme - Motion Design
+    {
+        id: "lac-de-come",
+        date: "2025-11",
+        category: "Motion Design",
+        title: "Lac de Côme",
+        tagline: "Animation touristique 15s",
+        shortDescription: "Motion design promotionnel de 15 secondes pour la destination touristique du Lac de Côme.",
+        description: "Une animation motion design de 15 secondes présentant le Lac de Côme comme destination touristique. Le projet combine design vectoriel réalisé sur Illustrator, animation sur After Effects et sound design monté sur Premiere Pro.",
+        image: "/images/projets/lac-de-come.png",
+        gallery: [],
+        video: "/images/projets/lac-de-come.mp4",
+        color: "#0ea5e9",
+        liveLink: "",
+        repoLink: "",
+        features: [
+            "Design vectoriel (Illustrator)",
+            "Animation (After Effects)",
+            "Sound Design (Premiere Pro)",
+            "Format 15 secondes"
+        ],
+        tech: [
+            { name: "Illustrator", icon: IconBrandAdobeIllustrator, desc: "Design Vectoriel" },
+            { name: "After Effects", icon: IconMovie, desc: "Animation" },
+            { name: "Premiere Pro", icon: IconMovie, desc: "Montage & Son" },
+        ],
+        challenges: "Créer une animation fluide et captivante en seulement 15 secondes tout en transmettant l'atmosphère unique du Lac de Côme.",
+        outcome: "Une vidéo promotionnelle dynamique qui met en valeur mes compétences en motion design et en création audiovisuelle."
+    },
+
+    // 9. LG Bâtiment
     {
         id: "lg-batiment",
         date: "2025-01",
@@ -330,12 +361,13 @@ export const projectsData: ProjectData[] = [
         tagline: "Rénovation & Peinture Intérieure",
         shortDescription: "Conception complète (A-Z) pour une société de bâtiment : Logo, Site Web, SEO et Fiche Google Business.",
         description: "Un projet global réalisé de A à Z pour une société de plaquiste et peinture à Angoulême. De la conception de la charte graphique et de la maquette, jusqu'au développement du site vitrine en React/Tailwind, en passant par l'optimisation SEO et la gestion de la fiche Google Business.",
-        image: "https://images.unsplash.com/photo-1581094794329-cd1196532981?w=1200&q=90",
+        image: "/images/projets/lg-batiment.png",
         gallery: [
-            "https://images.unsplash.com/photo-1581094794329-cd1196532981?w=1200&q=90",
-            "https://images.unsplash.com/photo-1620626012053-1c16969482fe?w=1200&q=90",
-            "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=90",
-            "https://images.unsplash.com/photo-1599809275372-b4257e2c6233?w=1200&q=90"
+            "/images/projets/lg-batiment.png",
+            "/images/projets/lg-batiment-1.png",
+            "/images/projets/lg-batiment-2.png",
+            "/images/projets/lg-batiment-3.png",
+            "/images/projets/lg-batiment-4.png"
         ],
         color: "#0f172a", // Orange for construction/building vibe
         liveLink: "https://lgbatiment.fr", // Hypothétique ou à remplir

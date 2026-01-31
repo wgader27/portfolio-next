@@ -12,18 +12,21 @@ import { fr } from "date-fns/locale";
 
 
 
-const TOC_ITEMS = [
-    { id: "overview", label: "Vue d'ensemble" },
-    { id: "features", label: "Fonctionnalités" },
-    { id: "tech", label: "Stack Technique" },
-    { id: "challenges", label: "Challenges" },
-    { id: "outcome", label: "Résultats" },
-    { id: "gallery", label: "Galerie" }
-];
+
 
 const ProjectDetails = () => {
     const { id } = useParams();
     const project = projectsData.find(p => p.id === id);
+
+    // Dynamic TOC based on project type
+    const TOC_ITEMS = [
+        { id: "overview", label: "Vue d'ensemble" },
+        { id: "features", label: "Fonctionnalités" },
+        { id: "tech", label: "Stack Technique" },
+        { id: "challenges", label: "Challenges" },
+        { id: "outcome", label: "Résultats" },
+        { id: "gallery", label: project?.video ? "Vidéo" : "Galerie" }
+    ];
 
     const [activeSection, setActiveSection] = useState("overview");
 
@@ -109,9 +112,11 @@ const ProjectDetails = () => {
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-white/90 hover:scale-105 transition-all flex items-center gap-2">
-                                <Globe size={20} /> Voir le site
-                            </a>
+                            {project.liveLink && (
+                                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-white/90 hover:scale-105 transition-all flex items-center gap-2">
+                                    <Globe size={20} /> Voir le site
+                                </a>
+                            )}
                             {project.repoLink && (
                                 <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-2">
                                     <Github size={20} /> Code Source
@@ -244,13 +249,28 @@ const ProjectDetails = () => {
                             </div>
                         </div>
 
-                        {/* GALLERY */}
+                        {/* GALLERY OR VIDEO */}
                         <div id="gallery" className="scroll-mt-32">
                             <div className="mb-8 flex items-center gap-3">
                                 <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
-                                <h2 className="text-3xl font-instrument italic text-white">Galerie</h2>
+                                <h2 className="text-3xl font-instrument italic text-white">
+                                    {project.video ? "Vidéo" : "Galerie"}
+                                </h2>
                             </div>
-                            <ProjectGallery images={project.gallery} />
+                            {project.video ? (
+                                <div className="w-full flex justify-center">
+                                    <div className="max-w-md rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+                                        <video
+                                            src={project.video}
+                                            controls
+                                            className="w-full h-auto max-h-[70vh]"
+                                            poster={project.image}
+                                        />
+                                    </div>
+                                </div>
+                            ) : (
+                                <ProjectGallery images={project.gallery} />
+                            )}
                         </div>
                     </div>
                 </div>

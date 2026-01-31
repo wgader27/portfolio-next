@@ -123,11 +123,12 @@ const Navbar = () => {
                             `,
                         backdropFilter: "blur(8px)"
                       }}
+                      initial={false}
                       transition={{
                         type: "spring",
-                        stiffness: 170,
-                        damping: 15,
-                        mass: 1
+                        stiffness: 400,
+                        damping: 30,
+                        mass: 0.8
                       }}
                     />
                   )}

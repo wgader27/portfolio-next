@@ -1,12 +1,15 @@
 "use client";
 import React, { useRef, useState, useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 import { Eye, ArrowRight, Star } from "lucide-react";
 import {
-  IconBrandReact,
   IconBrandNextjs,
   IconBrandTypescript,
   IconBrandTailwind,
-  IconBrandFirebase,
+  IconBrandHtml5,
+  IconBrandJavascript,
+  IconBrandPhp,
+  IconBrandPrisma,
 } from "@tabler/icons-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -19,74 +22,69 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    title: "Next Ventures",
-    tagline: "Autonomiser les Entrepreneurs",
+    title: "Boutique Click & Collect",
+    tagline: "E-commerce & Identité Galeries Lafayette",
     description:
-      "Une plateforme conçue pour les entrepreneurs en phase de démarrage pour pitcher, parcourir et s'engager avec des idées de startups. Rapide et impressionnante pour utilisateurs et investisseurs.",
+      "Une boutique Click & Collect entièrement fonctionnelle respectant l'identité visuelle des Galeries Lafayette. API REST PHP/MySQL custom pour gérer catalogue, utilisateurs et commandes.",
     features: [
-      "Prerendering partiel pour la vitesse.",
-      "Flux de soumission d'idées simplifié.",
-      "Expérience de navigation améliorée.",
+      "Analyse Design System Galeries Lafayette",
+      "API REST PHP/MySQL (MVC)",
+      "Panier & Authentification",
     ],
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=90",
-    color: "#ec4899", // Pink
+    image: "/images/projets/boutique-click-collect-2.png",
+    color: "#3b82f6",
     tech: [
-      { name: "NEXT.JS", icon: IconBrandNextjs },
-      { name: "REACT", icon: IconBrandReact },
-      { name: "SANITY CMS", icon: IconBrandNextjs },
+      { name: "HTML/CSS", icon: IconBrandHtml5 },
+      { name: "JAVASCRIPT", icon: IconBrandJavascript },
+      { name: "PHP", icon: IconBrandPhp },
     ],
-    link: "/projets/next-venture",
+    link: "/projets/boutique-click-collect",
     gradient: "from-blue-500/20 to-cyan-500/20",
     border: "group-hover:border-blue-500/50",
     shadow: "group-hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.3)]",
   },
   {
     id: 2,
-    title: "Finote App",
-    tagline: "Gestionnaire de Finances",
+    title: "Site Streaming",
+    tagline: "Plateforme VOD & Double DA Canal+",
     description:
-      "Un compagnon mobile intuitif pour organiser vos portefeuilles numériques et analyser votre santé financière via des graphiques interactifs.",
+      "Plateforme de streaming complète avec gestion de profils, favoris, backoffice admin et deux versions : DA originale et adaptation Canal+.",
     features: [
-      "Gérez plusieurs portefeuilles",
-      "Visualisez les tendances de dépenses",
-      "Attachez des reçus et synchronisez",
-      "Navigation fluide et animée",
-      "Sécurité des données renforcée",
+      "Catalogue Films & Bandes-Annonces",
+      "Backoffice Administrateur (CRUD)",
+      "Double DA : Originale & Canal+",
     ],
-    image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=90",
-    color: "#8b5cf6", // Violet
+    image: "/images/projets/site-streaming.png",
+    color: "#10b981",
     tech: [
-      { name: "EXPO", icon: IconBrandReact },
-      { name: "TYPESCRIPT", icon: IconBrandTypescript },
-      { name: "FIREBASE", icon: IconBrandFirebase },
+      { name: "HTML/CSS", icon: IconBrandHtml5 },
+      { name: "JAVASCRIPT", icon: IconBrandJavascript },
+      { name: "PHP", icon: IconBrandPhp },
     ],
-    link: "/projets/finote",
+    link: "/projets/site-streaming",
     gradient: "from-emerald-500/20 to-green-500/20",
     border: "group-hover:border-emerald-500/50",
     shadow: "group-hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)]",
   },
   {
     id: 3,
-    title: "CodeSnippets",
-    tagline: "Partage de Code Instantané",
+    title: "Githread",
+    tagline: "Réseau social pour Développeurs",
     description:
-      "Plateforme pour développeurs pour sauvegarder, organiser et partager des snippets de code avec coloration syntaxique et collaboration.",
+      "Réseau social inspiré de Threads, lié à GitHub. Créez un compte, publiez des messages, répondez dans les commentaires.",
     features: [
-      "Coloration pour 50+ langages.",
-      "Partage privé et public.",
-      "Fonctionnalités de collaboration.",
+      "Authentification via GitHub",
+      "Publication & Commentaires",
+      "Profil utilisateur",
     ],
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=90",
-    color: "#06b6d4", // Cyan
+    image: "/images/projets/githread.png",
+    color: "#1e293b",
     tech: [
       { name: "NEXT.JS", icon: IconBrandNextjs },
       { name: "TYPESCRIPT", icon: IconBrandTypescript },
-      { name: "TAILWIND", icon: IconBrandTailwind },
+      { name: "PRISMA", icon: IconBrandPrisma },
     ],
-    link: "/projects/codesnippets",
+    link: "/projets/githread",
   },
 ];
 
@@ -175,7 +173,7 @@ const CuratedWork = () => {
                       className="text-xs font-bold tracking-widest uppercase font-outfit"
                       style={{ color: projects[activeIndex].color }}
                     >
-                      Px Project {activeIndex + 1}
+                      PROJET {activeIndex + 1}
                     </span>
                   </div>
 
@@ -252,9 +250,10 @@ const ProjectCard = ({
   const y = (mousePos.y - 0.5) * -20;
 
   return (
-    <div
+    <Link
+      to={project.link}
       ref={setRef}
-      className="min-h-[70vh] w-full flex items-center justify-center p-4 lg:p-8 relative"
+      className="min-h-[70vh] w-full flex items-center justify-center p-4 lg:p-8 relative block cursor-pointer"
       data-index={index}
     >
       <motion.div
@@ -345,7 +344,7 @@ const ProjectCard = ({
                     {/* PURE WHITE TEXT for Glass look */}
                     <text className="text-[12px] font-bold uppercase tracking-[0.2em] font-outfit" fill="white">
                       <textPath href={`#circlePathRef-${index}`} startOffset="0%">
-                        Voir Détails • Voir Détails •
+                        Voir Projet • Voir Projet •
                       </textPath>
                     </text>
                   </svg>
@@ -363,7 +362,7 @@ const ProjectCard = ({
         </AnimatePresence>
 
       </motion.div>
-    </div>
+    </Link>
   )
 }
 
