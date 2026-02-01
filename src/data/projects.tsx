@@ -308,7 +308,7 @@ export const projectsData: ProjectData[] = [
         ],
         color: "#ca6e6eff",
         liveLink: "https://wgader27.github.io/githread",
-        repoLink: "https://github.com/wgader27/githread",
+        repoLink: "https://githread.onrender.com",
         features: [
             "Auth via GitHub",
             "Profil utilisateur",
