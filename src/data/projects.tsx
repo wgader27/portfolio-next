@@ -35,7 +35,11 @@ export interface ProjectData {
     video?: string; // Optional video field for motion design projects
     color: string;
     liveLink: string;
+    liveLinkLabel?: string; // Custom label for liveLink button (default: "Voir le site")
+    liveLinkIcon?: "globe" | "figma" | "play" | "external"; // Custom icon (default: globe)
     repoLink: string;
+    repoLinkLabel?: string; // Custom label for repoLink button (default: "Code Source")
+    repoLinkIcon?: "github" | "figma" | "folder" | "external"; // Custom icon (default: github)
     features: string[];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     tech: { name: string; icon: any; desc?: string }[];
@@ -352,7 +356,46 @@ export const projectsData: ProjectData[] = [
         outcome: "Une vidéo promotionnelle dynamique qui met en valeur mes compétences en motion design et en création audiovisuelle."
     },
 
-    // 9. LG Bâtiment
+    // 9. MyCrew - Prototype Figma
+    {
+        id: "mycrew",
+        date: "2025-12",
+        category: "UX/UI Design",
+        title: "MyCrew",
+        tagline: "App de rencontre sportive",
+        shortDescription: "Prototype Figma complet pour une application mobile de rencontre sportive avec système de matching type Tinder.",
+        description: "MyCrew est un projet de conception UX/UI pour une application mobile de rencontre sportive. Le concept s'inspire des apps de dating (Tinder, Meetic) avec un système de swipe gauche/droite pour matcher avec d'autres sportifs. Les utilisateurs créent leur profil avec leurs sports et niveaux, peuvent découvrir des événements sportifs près de chez eux et communiquer via un système de messagerie intégré.",
+        image: "/images/projets/mycrew-thumb.png",
+        gallery: [
+            "/images/projets/mycrew.png",
+            "/images/projets/mycrew-1.png",
+            "/images/projets/mycrew-2.png",
+            "/images/projets/mycrew-3.png",
+            "/images/projets/mycrew-4.png"
+        ],
+        color: "#f97316",
+        liveLink: "https://www.figma.com/proto/zw7S4EGHCGbeeC3GLJpWjg/Wahel-GADER---mycrew?node-id=4008-42&p=f&t=FX5aRz5kRa6dlUAo-1&scaling=scale-down&content-scaling=fixed&page-id=4007%3A2&starting-point-node-id=4008%3A42",
+        liveLinkLabel: "Voir le Prototype",
+        liveLinkIcon: "play",
+        repoLink: "https://www.figma.com/design/zw7S4EGHCGbeeC3GLJpWjg/Wahel-GADER---mycrew?node-id=4007-2&t=LnELjL4jucBa2iFl-1",
+        repoLinkLabel: "Fichier Figma",
+        repoLinkIcon: "figma",
+        features: [
+            "Système de matching (Swipe gauche/droite)",
+            "Profil utilisateur avec sports & niveaux",
+            "Événements sportifs géolocalisés",
+            "Messagerie intégrée",
+            "Design System & Composants",
+            "Charte graphique complète"
+        ],
+        tech: [
+            { name: "Figma", icon: IconBrandFigma, desc: "Prototype & Design" },
+        ],
+        challenges: "Concevoir une expérience utilisateur intuitive qui adapte le concept de swipe des apps de dating au contexte sportif, tout en créant un design system cohérent et réutilisable.",
+        outcome: "Un prototype Figma complet avec composants, design system et charte graphique, prêt à être développé en application mobile native."
+    },
+
+    // 10. LG Bâtiment
     {
         id: "lg-batiment",
         date: "2025-01",
@@ -383,7 +426,7 @@ export const projectsData: ProjectData[] = [
         tech: [
             { name: "React", icon: IconBrandReact, desc: "Développement Frontend" },
             { name: "Tailwind CSS", icon: IconBrandTailwind, desc: "Styling Moderne" },
-            { name: "Photoshop", icon: IconBrandAdobePhotoshop, desc: "Retouche Photo & Maquettes" },
+            { name: "Photoshop", icon: IconBrandAdobePhotoshop, desc: "Retouche Photo" },
             { name: "Illustrator", icon: IconBrandAdobeIllustrator, desc: "Création Logo & Vecteurs" },
         ],
         challenges: "Le défi principal a été de créer une identité visuelle professionnelle partant de zéro et de positionner rapidement le site sur les mots-clés locaux ('plaquiste Angoulême') grâce à une stratégie SEO.",

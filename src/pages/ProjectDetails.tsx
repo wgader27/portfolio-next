@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Globe, Github, Check, ChevronRight } from "lucide-react";
+import { ArrowLeft, Globe, Github, Check, ChevronRight, Play, ExternalLink, Folder } from "lucide-react";
+import { IconBrandFigma } from "@tabler/icons-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
@@ -10,6 +11,24 @@ import ProjectGallery from "@/components/ProjectGallery";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
+// Helper to get the right icon based on icon type
+const getLiveLinkIcon = (iconType?: string) => {
+    switch (iconType) {
+        case "play": return <Play size={20} />;
+        case "figma": return <IconBrandFigma size={20} />;
+        case "external": return <ExternalLink size={20} />;
+        default: return <Globe size={20} />;
+    }
+};
+
+const getRepoLinkIcon = (iconType?: string) => {
+    switch (iconType) {
+        case "figma": return <IconBrandFigma size={20} />;
+        case "folder": return <Folder size={20} />;
+        case "external": return <ExternalLink size={20} />;
+        default: return <Github size={20} />;
+    }
+};
 
 
 
@@ -114,12 +133,12 @@ const ProjectDetails = () => {
                         <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                             {project.liveLink && (
                                 <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-white/90 hover:scale-105 transition-all flex items-center gap-2">
-                                    <Globe size={20} /> Voir le site
+                                    {getLiveLinkIcon(project.liveLinkIcon)} {project.liveLinkLabel || "Voir le site"}
                                 </a>
                             )}
                             {project.repoLink && (
                                 <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-2">
-                                    <Github size={20} /> Code Source
+                                    {getRepoLinkIcon(project.repoLinkIcon)} {project.repoLinkLabel || "Code Source"}
                                 </a>
                             )}
                         </div>

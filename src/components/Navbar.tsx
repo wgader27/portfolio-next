@@ -69,31 +69,15 @@ const Navbar = () => {
 
           {/* Links (Desktop) */}
           <nav className="hidden md:flex items-center gap-1">
-            {/* Hidden SVG Filter for Liquid Distortion */}
-            <svg className="absolute w-0 h-0">
-              <filter id="liquid-glass">
-                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
-                <feGaussianBlur stdDeviation="0.5" />
-              </filter>
-            </svg>
-
             {navLinks.map((link) => {
               // Custom active logic
               let isActive = false;
               if (link.path === "/") {
                 isActive = location.pathname === "/" && !location.hash;
               } else if (link.path.includes("#")) {
-                // For #links, treat as active if we are on the page AND the hash matches, 
-                // OR if we are scrolling through that section (simpler: just match URL for now to allow highlighting)
-                // Actually, "À propos" is on Home, so if we are on Home we might see it active.
-                // Let's keep it simple: Active if hash matches exactly.
                 const [path, hash] = link.path.split("#");
                 isActive = location.pathname === path && location.hash === `#${hash}`;
               } else {
-                // Robust matching for sub-paths (e.g. /projets/1 matches /projets)
-                // but avoid /projets-abc matching /projets
-                // AND ensure we are NOT on the root path if the link isn't root (prevents "Projets" being active on Home)
                 isActive = (location.pathname === link.path || location.pathname.startsWith(`${link.path}/`)) && link.path !== "/";
               }
 
@@ -123,7 +107,6 @@ const Navbar = () => {
                             `,
                         backdropFilter: "blur(8px)"
                       }}
-                      initial={false}
                       transition={{
                         type: "spring",
                         stiffness: 400,
