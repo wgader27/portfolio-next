@@ -478,7 +478,12 @@ export const projectsData: ProjectData[] = [
         description: "HoloBarista est un jeu immersif en Réalité Mixte (XR) développé avec A-Frame, Three.js, HTML et JavaScript, spécialement conçu pour le casque Meta Quest 3. L'objectif est de créer son propre café virtuel intégré dans son environnement réel grâce à la détection spatiale. Le joueur doit gérer l'ouverture de la boutique, acheter des objets et de la décoration, préparer et servir des cafés aux clients, tout en gérant l'encaissement et l'entretien (ménage). Une file d'attente se forme avec des clients dont la patience diminue s'ils ne sont pas servis à temps !",
         image: "/images/projets/holobarista.png",
         gallery: [
-            "/images/projets/holobarista.png"
+            "/images/projets/holobarista-1.png",
+            "/images/projets/holobarista-2.png",
+            "/images/projets/holobarista-3.png",
+            "/images/projets/holobarista-4.png",
+            "/images/projets/holobarista-5.png",
+            "/images/projets/holobarista-6.png"
         ],
         color: "#d97706",
         liveLink: "https://wgader27.github.io/HoloBarista/",
@@ -508,7 +513,7 @@ export const projectsData: ProjectData[] = [
         tagline: "Application sportive pour coworking",
         shortDescription: "Prototype Figma d'une application de sport gamifiée pour les coworkers d'Hémera, basée sur la mythologie grecque.",
         description: "CowerMood est un prototype applicatif conçu pour Hémera, un espace de coworking. L'objectif était de créer une application favorisant la pratique sportive entre coworkers. Le concept est basé sur la mythologie grecque : chaque jour, l'utilisateur choisit son humeur ('mood') associée à un dieu. Ensuite, l'application génère via une IA un programme sportif sur mesure (ex: entraînement intense thématique Zeus) sous forme de parcours de vidéos avec suivi des mouvements. Le projet inclut aussi un système de création de parties, pour faire du sport en groupe, et un classement gamifié des coworkers.",
-        image: "/images/projets/cowermood1.png",
+        image: "/images/projets/cowermood.png",
         gallery: [
             "/images/projets/cowermood.png",
             "/images/projets/cowermood1.png",
