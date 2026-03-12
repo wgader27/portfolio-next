@@ -307,8 +307,8 @@ export const projectsData: ProjectData[] = [
             "/images/projets/githread-1.png"
         ],
         color: "#ca6e6eff",
-        liveLink: "https://wgader27.github.io/githread",
-        repoLink: "https://githread.onrender.com",
+        liveLink: "https://githread.onrender.com",
+        repoLink: "https://github.com/wgader27/githread",
         features: [
             "Auth via GitHub",
             "Profil utilisateur",
@@ -433,6 +433,154 @@ export const projectsData: ProjectData[] = [
         outcome: "Une présence digitale complète qui a permis à l'entreprise de gagner en crédibilité et d'attirer ses premiers clients via le web dès le premier mois."
     },
 
+
+    // 11. Boardly
+    {
+        id: "boardly",
+        date: "2025-10",
+        category: "Application Web",
+        title: "Boardly",
+        tagline: "Application Kanban Complète",
+        shortDescription: "Une application type Kanban permettant de gérer ses tâches sous forme de colonnes (À faire, En cours, Fini).",
+        description: "Boardly est une application de gestion de projet de type Kanban développée avec Next.js et Prisma. Elle permet de créer des tâches, d'ajouter des sous-tâches (avec possibilité de les cocher), de supprimer des tâches, et de les organiser dans des colonnes dynamiques (À faire, En cours, Fini). L'interface est conçue avec Tailwind CSS pour un rendu épuré, réactif et intuitif.",
+        image: "/images/projets/todolist.png",
+        gallery: [
+            "/images/projets/todolist.png",
+            "/images/projets/todolist-1.png",
+            "/images/projets/todolist-2.png"
+        ],
+        color: "#8b5cf6",
+        liveLink: "",
+        repoLink: "https://github.com/wgader27/board-app-next",
+        features: [
+            "Système Kanban (À faire, En cours, Fini)",
+            "Création de tâches",
+            "Sous-tâches avec cases à cocher",
+            "Suppression de tâches"
+        ],
+        tech: [
+            { name: "Next.js", icon: IconBrandNextjs, desc: "Framework React" },
+            { name: "Tailwind CSS", icon: IconBrandTailwind, desc: "Styling Rapide" },
+            { name: "Prisma", icon: IconBrandPrisma, desc: "ORM Type-safe" },
+        ],
+        challenges: "Gérer l'état complexe d'un tableau Kanban interactif avec des sous-tâches, tout en assurant une synchronisation fluide avec la base de données via Prisma.",
+        outcome: "Une application de gestion de tâches fonctionnelle et performante pour l'organisation personnelle ou professionnelle."
+    },
+
+    // 12. HoloBarista
+    {
+        id: "holobarista",
+        date: "2026-02",
+        category: "Jeu XR & Réalité Mixte",
+        title: "HoloBarista",
+        tagline: "Gérez votre café en Réalité Mixte",
+        shortDescription: "Un jeu XR jouable sur Meta Quest 3 où vous construisez et gérez votre propre café dans votre environnement réel avec détection spatiale.",
+        description: "HoloBarista est un jeu immersif en Réalité Mixte (XR) développé avec A-Frame, Three.js, HTML et JavaScript, spécialement conçu pour le casque Meta Quest 3. L'objectif est de créer son propre café virtuel intégré dans son environnement réel grâce à la détection spatiale. Le joueur doit gérer l'ouverture de la boutique, acheter des objets et de la décoration, préparer et servir des cafés aux clients, tout en gérant l'encaissement et l'entretien (ménage). Une file d'attente se forme avec des clients dont la patience diminue s'ils ne sont pas servis à temps !",
+        image: "/images/projets/holobarista.png",
+        gallery: [
+            "/images/projets/holobarista.png"
+        ],
+        color: "#d97706",
+        liveLink: "https://wgader27.github.io/HoloBarista/",
+        repoLink: "https://github.com/wgader27/HoloBarista",
+        features: [
+            "Détection spatiale (Mixed Reality / XR)",
+            "Gestion du café et Todo list (Ménage, Ouverture)",
+            "Système de file d'attente et patience des clients",
+            "Achat d'objets et décoration de la boutique",
+            "Préparation de cafés et encaissement"
+        ],
+        tech: [
+            { name: "HTML/JS", icon: IconBrandJavascript, desc: "Logique Client" },
+            { name: "Three.js", icon: IconBrandThreejs, desc: "3D WebGL" },
+            { name: "A-Frame", icon: IconDeviceGamepad, desc: "Framework XR" },
+        ],
+        challenges: "Adapter le gameplay à l'environnement réel du joueur via la détection spatiale WebXR, tout en gérant une logique de clients dynamique et interactive (file d'attente, patience, collisions).",
+        outcome: "Un jeu immersif repoussant les frontières entre virtuel et réalité, offrant une expérience ludique en pleine croissance sur les casques de réalité mixte."
+    },
+
+    // 13. CowerMood
+    {
+        id: "cowermood",
+        date: "2025-06",
+        category: "UX/UI Design & Application",
+        title: "CowerMood",
+        tagline: "Application sportive pour coworking",
+        shortDescription: "Prototype Figma d'une application de sport gamifiée pour les coworkers d'Hémera, basée sur la mythologie grecque.",
+        description: "CowerMood est un prototype applicatif conçu pour Hémera, un espace de coworking. L'objectif était de créer une application favorisant la pratique sportive entre coworkers. Le concept est basé sur la mythologie grecque : chaque jour, l'utilisateur choisit son humeur ('mood') associée à un dieu. Ensuite, l'application génère via une IA un programme sportif sur mesure (ex: entraînement intense thématique Zeus) sous forme de parcours de vidéos avec suivi des mouvements. Le projet inclut aussi un système de création de parties, pour faire du sport en groupe, et un classement gamifié des coworkers.",
+        image: "/images/projets/cowermood1.png",
+        gallery: [
+            "/images/projets/cowermood.png",
+            "/images/projets/cowermood1.png",
+            "/images/projets/cowermood2.png",
+            "/images/projets/cowermood3.png",
+            "/images/projets/cowermood4.png",
+            "/images/projets/cowermood5.png",
+            "/images/projets/cowermood6.png"
+        ],
+        color: "#fbbf24",
+        liveLink: "https://www.figma.com/proto/M9fvIdumvyvs2TUDcda1Tj/SA%C3%892.02?node-id=132-1685&t=zCZKbbb9bzCarKTM-0&scaling=min-zoom&content-scaling=fixed&page-id=20%3A1188&starting-point-node-id=132%3A1685",
+        liveLinkLabel: "Voir le Prototype",
+        liveLinkIcon: "play",
+        repoLink: "",
+        features: [
+            "Thème évolutif (Mythologie Grecque)",
+            "Programmes sportifs IA interactifs",
+            "Suivi des mouvements intégré",
+            "Création de parties multi-joueurs",
+            "Système de classement & Gamification",
+            "Prototype interactif HD (Figma)"
+        ],
+        tech: [
+            { name: "Figma", icon: IconBrandFigma, desc: "Prototype & Design" },
+        ],
+        challenges: "Modéliser une application qui pousse au lien social tout en rendant le sport accessible et ludique dans un milieu de travail (coworking), grâce à un choix de design innovant (IA + Mocap + Mythologie).",
+        outcome: "Un prototype complet et immersif qui a su répondre parfaitement aux attentes gamifiées et sportives de l'entreprise Hémera."
+    },
+
+    // 14. Musée des Beaux-Arts
+    {
+        id: "musee-beaux-arts",
+        date: "2025-11",
+        category: "UX/UI Design & Application",
+        title: "Musée des Beaux-Arts",
+        tagline: "Application interactive du musée",
+        shortDescription: "Prototype Figma d'une application compagnon pour le Musée des Beaux-Arts de Limoges avec audio, AR et vues 360°.",
+        description: "Ce projet est un prototype d'application mobile pour le Musée des Beaux-Arts de Limoges. L'application enrichit l'expérience des visiteurs grâce à plusieurs fonctionnalités innovantes : scan de QR codes pour obtenir des informations sur les œuvres, parcours en Réalité Augmentée (AR) qui guident l'utilisateur et analysent les œuvres via la caméra, et des vues à 360 degrés. Une carte interactive aide à se repérer dans le musée. Chaque œuvre dispose de sa propre page avec description, audio description et vidéo. L'application propose également un système de profil utilisateur et est entièrement bilingue (Français/Anglais).",
+        image: "/images/projets/app-musee.png",
+        gallery: [
+            "/images/projets/app-musee.png",
+            "/images/projets/app-musee-1.png",
+            "/images/projets/app-musee-2.png",
+            "/images/projets/app-musee-3.png",
+            "/images/projets/app-musee-4.png",
+            "/images/projets/app-musee-5.png",
+            "/images/projets/app-musee-6.jpg",
+            "/images/projets/app-musee-7.jpg",
+            "/images/projets/app-musee-8.png",
+            "/images/projets/app-musee-9.png",
+            "/images/projets/app-musee-10.png",
+            "/images/projets/app-musee-11.png"
+        ],
+        color: "#b91c1c",
+        liveLink: "https://www.figma.com/proto/ozeZ8z1UxpfY5eL8UhEVjI/Application-mus%C3%A9e-beaux-arts-limoges?node-id=1001-454&t=E8I72IZBBjtlUzeH-0&scaling=scale-down&content-scaling=fixed&page-id=138%3A2&starting-point-node-id=1001%3A454",
+        liveLinkLabel: "Voir le Prototype",
+        liveLinkIcon: "play",
+        repoLink: "",
+        features: [
+            "Scan QR code des œuvres",
+            "Parcours guidés & Audio description",
+            "Réalité Augmentée (AR) & Analyse",
+            "Vues interactives à 360 degrés",
+            "Carte interactive du musée",
+            "Support bilingue (FR/EN)"
+        ],
+        tech: [
+            { name: "Figma", icon: IconBrandFigma, desc: "Prototype & Design" },
+        ],
+        challenges: "Concevoir une interface accessible à un large public (touristes, locaux, accessibilité) tout en intégrant de nombreuses fonctionnalités avancées (AR, audio, map, scan).",
+        outcome: "Un prototype d'application musée complet et riche, qui modernise l'expérience visiteur et met en valeur les œuvres de manière interactive."
+    }
 
 ];
 
