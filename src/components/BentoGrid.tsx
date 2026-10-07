@@ -74,7 +74,7 @@ const BentoGrid = () => {
                 <span className="font-instrument bg-gradient-to-r from-violet to-pink bg-clip-text text-transparent italic">Développeur Web</span>
               </h3>
               <p className="text-white/70 text-lg max-w-lg leading-relaxed font-light">
-                Je suis à la recherche d'une opportunité de travail</strong>.
+                <strong>Je suis à la recherche d'une opportunité de travail</strong>.
                 Passionné par le développement Front & Back, je suis prêt à intégrer votre équipe.
               </p>
             </div>
