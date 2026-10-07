@@ -97,7 +97,7 @@ const BentoGrid = () => {
               <img src="img_wahel.jpg" className="w-16 h-16 rounded-full object-cover  opacity-80 scale-125 object-top" alt="Student" />
             </div>
             <h4 className="text-xl font-bold text-white mb-1">Wahel GADER</h4>
-            <p className="text-white/50 text-sm">2ème année • BUT MMI</p>
+            <p className="text-white/50 text-sm">3ème année • BUT MMI</p>
           </LiquidCard>
 
           {/* CARD 3: CV DOWNLOAD (Small) */}
