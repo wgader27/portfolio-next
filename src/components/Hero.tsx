@@ -95,11 +95,11 @@ const Hero = () => {
         className="relative z-20 text-center max-w-5xl mx-auto px-4 mb-10"
       >
         <h1 className="text-4xl md:text-5xl lg:text-7xl leading-[0.95] tracking-tight font-instrument text-white drop-shadow-2xl">
-          Étudiant en 2ème année
+          Étudiant en 3ème année
           <br />
           <span className="font-instrument bg-gradient-to-r from-violet to-pink bg-clip-text text-transparent not-italic">BUT MMI</span>{" "}
           <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/60">
-            recherche un stage
+            en alternance
           </span>
         </h1>
       </motion.div>
