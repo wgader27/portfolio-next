@@ -70,11 +70,11 @@ const BentoGrid = () => {
 
             <div className="mt-8 space-y-4">
               <h3 className="text-3xl md:text-5xl font-instrument text-white leading-tight">
-                Recherche de stage <br />
+                Recherche du travail <br />
                 <span className="font-instrument bg-gradient-to-r from-violet to-pink bg-clip-text text-transparent italic">Développeur Web</span>
               </h3>
               <p className="text-white/70 text-lg max-w-lg leading-relaxed font-light">
-                Je suis à la recherche d'une opportunité de stage de <strong>8 à 12 semaines</strong>.
+                Je suis à la recherche d'une opportunité de travail</strong>.
                 Passionné par le développement Front & Back, je suis prêt à intégrer votre équipe.
               </p>
             </div>
@@ -82,7 +82,7 @@ const BentoGrid = () => {
             <div className="mt-auto pt-8 flex items-center gap-6 text-sm font-medium text-white/50">
               <div className="flex items-center gap-2">
                 <Calendar size={16} className="text-violet-400" />
-                <span>Avril - Juin 2026</span>
+                <span>Âout 2027</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={16} className="text-violet-400" />
